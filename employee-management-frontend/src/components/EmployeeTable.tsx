@@ -14,6 +14,8 @@ import {
   Button,
 } from "@mui/material";
 import axios from "axios";
+import ModeEditOutlineIcon from "@mui/icons-material/ModeEditOutline";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const EmployeeTable: React.FC = () => {
   const [employees, setEmployees] = useState<Employee[]>([]);
@@ -75,14 +77,14 @@ const EmployeeTable: React.FC = () => {
                   color="primary"
                   sx={{ mr: 1 }}
                 >
-                  Edit
+                  <ModeEditOutlineIcon/>
                 </Button>
                 <Button
                   variant="contained"
                   color="secondary"
                   onClick={() => handleDelete(employee.id)}
                 >
-                  Delete
+                 <DeleteIcon />
                 </Button>
               </TableCell>
             </TableRow>
